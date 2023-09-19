@@ -1,0 +1,109 @@
+.divBlack{
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    z-index: 10;
+}
+
+.divBackground{
+    width: 100%;
+    height: 100%;
+}
+
+.homeContainer{
+    display: flex;
+    width: 100%;
+    height: 100hv;
+    flex-wrap: wrap;
+    flex-direction: column;
+    background-image: url("../../media/pictures/mario1.webp");
+    background-size: cover;
+    background-position: center;
+    min-width: 100vw;
+    min-height: 100vh;
+}
+
+.divSearchBar{
+    position: relative;
+    margin: 1vh;
+}
+  
+.divHome{
+    display: flex;
+    position: inherit;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.divGameLoader{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 95vw;
+    height: 60vh;
+    margin-top: 4vh;
+    flex-direction: column;
+    
+    & img{
+        width: 30vh;
+        opacity: 80%;
+        padding: 0;
+        margin: 0;
+    }
+
+    & h3{
+        margin: 0px;
+        padding: 0px;
+    }
+}
+
+.ulCards{
+    width: 95vw;
+    height: auto;
+    display: grid;
+    grid-template-columns: 
+        repeat(auto-fit, minmax(300px, 330px));
+    position: relative;
+    justify-items: center;
+    justify-content: center;
+    gap: 1.5vw;
+    margin-top: 4vh;
+    padding: 0px;
+}
+
+.divSelect{
+    position: relative;
+    flex-direction: row;
+    display: flex;
+    margin: 1vw;
+}
+.select{
+    background-color: transparent;
+    border-radius: .375em;
+    width: 10rem;
+    height: max-content;
+    margin: 2px;
+    font-size: 1rem;
+    font-style: italic;
+    color: rgba(255, 255, 255, 0.7);
+    text-shadow: 3px 3px 5px rgba(255, 95, 46, 0.76);
+    border: none;
+    &:hover{
+        background: transparent;
+        background-color: transparent;
+    }
+    & option{
+        color: black;
+    }        
+}
+
+h3{
+    font-size: 1.2rem;
+    font-style: italic;
+    color: rgba(255, 255, 255, 0.7);
+    text-shadow: 3px 3px 5px rgba(255, 95, 46, 0.76);
+    margin: 2px;
+}

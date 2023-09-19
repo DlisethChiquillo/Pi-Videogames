@@ -1,0 +1,79 @@
+.divCard{
+    display: flex;
+    width: 300px;
+    height: 168.75px;
+    flex-direction: column;
+    flex-wrap: wrap;
+    position: relative;
+    border-radius: 2rem;
+}
+
+.cardImg{
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    width: 300px;
+    height: 168.75px;
+}
+
+.cardImg:hover{
+    .name,
+    .genres,
+    .rating{
+        display: flex;
+    }
+}
+
+.img{
+    width: 300px;
+    height: 168.75px;
+    /* border-radius: 2rem; */
+    cursor: pointer;
+    transition: 0.8s;
+
+    &:hover{
+        width: 330px;
+        height: 185.625px;
+        filter: blur(0.2rem) brightness(40%);      
+    }
+    
+}
+
+.name{
+    display: none;
+    font-size: 1.5rem;
+    margin: 0px;
+    top: 2rem;
+    position: relative;
+    z-index: 2;
+    font-style: italic;
+    color: rgba(201, 201, 201, 0.7);
+    text-shadow: 3px 3px 5px rgb(187, 0, 140);
+}
+
+.rating{
+    display: none;
+    font-size: 1rem;
+    margin: 0px;
+    position: relative;
+    bottom: 3rem;
+    z-index: 2;
+    font-style: italic;
+    color: rgba(201, 201, 201, 0.7);
+    text-shadow: 3px 3px 5px rgb(187, 0, 140);
+}
+    
+.genres{
+    display: none;
+    font-size: 16px;
+    margin: 0px;
+    position: relative;
+    bottom: 3rem;
+    z-index: 2;
+    font-style: italic;
+    color: rgba(201, 201, 201, 0.7);
+    text-shadow: 3px 3px 5px rgb(187, 0, 140);
+}

@@ -1,0 +1,74 @@
+.divSearchBar{
+    margin-top: 1vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: max-content;
+    height: auto;
+    transition: 0.8s;
+    border-radius: 3rem 3rem 3rem 3rem;
+}
+
+.divSearchBar:hover{
+    box-shadow: rgba(196, 3, 214, 0.3) 0px 0px 0px 3px;
+    width: 400px;
+    height: 60px;
+
+    .inputSearch{
+        width: 350px;
+        height: 60px;
+    }
+    .inputSearch::placeholder{
+        color: rgba(150, 150, 150, 0.5);
+    }
+    
+    .buttonSearch{
+        width: 60px;
+        height: 60px;
+        color: rgba(201, 201, 201, 0.7);
+        text-shadow: 3px 3px 5px rgb(187, 0, 140);
+    }
+}
+
+@media screen and (max-width: 780px) {
+    .divSearchBar{
+        width: 80vw;
+    }
+
+    .divSearchBar:hover{
+        width: 90vw;
+    }
+}
+
+.inputSearch{
+    background-color: rgba(190, 134, 23, 0.928);
+    width: 300px;
+    height: 45px;
+    border-radius: 3rem 0rem 0rem 3rem;
+    border: none;
+    color: rgba(255, 95, 46, 0.76);
+    transition: 0.8s;
+    font-size: 1.5rem;
+    font-style: italic;
+    text-align: center;
+}
+.inputSearch::placeholder{
+    color: transparent;
+}
+
+.buttonSearch{
+    background-color: rgba(191, 138, 16, 0.864);
+    border-radius: 0rem 3rem 3rem 0rem;
+    border: none;
+    width: 45px;
+    height: 47px;
+    text-align: center;
+    transition: 0.8s;
+    color: transparent;
+    font-weight: bolder;
+    padding: 0px;
+    cursor: pointer;
+    margin: 0px;
+    font-size: 1.3rem;
+}

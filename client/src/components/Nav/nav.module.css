@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo:wght@900&display=swap');
+
+.divNav{
+    /* border-radius: 0px 0px 10px 10px;
+    background-color: rgba(0, 0, 0, 0.879);
+    background: rgba(16, 197, 194, 0.971); */
+    backdrop-filter: blur(3px);
+    width: 100vw;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    background-image: url("../../media/pictures/madera1.jpg");
+    background-size: cover;
+    background-position: center;
+
+
+}
+
+.divDelorean{
+    margin-right: 30vw;
+}
+
+.nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.aNav {
+    text-decoration: none;
+    color: rgb(187, 187, 187);
+    position: relative;
+    font-family: 'Exo';
+    font-size: 35px;
+    font-style: italic;
+    letter-spacing: 0.03em;
+    transition: 0.8s;
+    text-shadow: 6px 10px 11px rgba(255, 252, 255, 0.8); 
+    &:hover{
+        font-size: 50px;
+    }
+}
+
+.navList{
+    display: flex;
+    list-style-type: none;
+    gap: 3vw;
+    padding: 0px;
+    position: inherit;
+    flex-direction: row;
+}

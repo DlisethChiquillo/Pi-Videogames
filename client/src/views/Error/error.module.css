@@ -1,0 +1,181 @@
+.divBlack{
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+ 
+  z-index: 10;
+}
+
+@media screen and (max-width: 780px) {
+  .h1Name{
+    top: -10vh;
+   
+  }
+
+  .pName{
+    top: -10vh;
+  
+  }
+}
+
+.divError{
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0px;
+    z-index: 3;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background-image: url("../../media/pictures/error1.gif");
+    background-size: cover;
+    background-position: center;
+    min-width: 100vw;
+    min-height: 100vh;
+
+}
+
+.divDelorean{
+    position: fixed;
+    left: 6rem;
+    bottom: 10rem;
+}
+
+.divBubble{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    left: 1.3rem;
+    top: 1rem;
+    height: 3rem;
+    width: 10rem;
+    background: white;
+    border-radius: 1rem;
+    box-shadow: 1px 12px 33px rgba(0, 0, 0, 0.5);
+
+    & p{
+        font-weight: bold;
+    }
+}
+
+.divBubble:before {
+    border: 15px solid white;
+    content: '';
+    border-left-color: transparent;
+    border-bottom-color: transparent;
+    border-right-color: transparent;
+    position: absolute;
+    bottom: -1.9rem;
+    left: calc(50% + 2rem)
+}
+
+.divContent{
+    width: 10vw;
+    height: 20vh;
+    display: flex;
+    justify-content: center;
+    z-index: 4;
+    flex-direction: column;
+    align-items: center;
+    border-radius: .5rem;
+}
+
+.h1Name{
+    position: relative;
+    transition: 0.8s;
+    font-size: 150px;
+    padding: 0px;
+    margin: 0px;
+    color: rgba(0, 0, 0, 0.898);
+    text-shadow: 3px 3px 5px rgba(255, 95, 46, 0.76);
+    &:hover{
+        opacity: 1;
+    }
+    animation: glitch 1s linear infinite;
+}
+  
+.h1Name:before,
+.h1Name:after{
+    content: attr(title);
+    position: absolute;
+    left: 0;
+}
+
+.h1Name:before{
+    animation: glitchTop 1s linear infinite;
+    clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%);
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%);
+}
+
+.h1Name:after{
+    animation: glitchBotom 1.5s linear infinite;
+    clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
+    -webkit-clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
+}
+
+.pName{
+  position: relative;
+    transition: 0.8s;
+    font-size: 40px;
+    margin: 0px;
+    color: rgba(222, 7, 7, 0.918);
+    text-shadow: 3px 3px 5px rgba(8, 7, 7, 0.941);
+    animation: glitch 1s linear infinite;
+}
+  
+.pName:before,
+.pName:after{
+    content: attr(title);
+    position: absolute;
+    left: 0;
+}
+
+.pName:before{
+    animation: glitchTop 1s linear infinite;
+    clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%);
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%);
+}
+
+.pName:after{
+    animation: glitchBotom 1.5s linear infinite;
+    clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
+    -webkit-clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
+}
+
+@keyframes glitch{
+    2%,64%{
+      transform: translate(2px,0) skew(0deg);
+    }
+    4%,60%{
+      transform: translate(-2px,0) skew(0deg);
+    }
+    62%{
+      transform: translate(0,0) skew(5deg); 
+    }
+}
+@keyframes glitchTop{
+    2%,64%{
+      transform: translate(2px,-2px);
+    }
+    4%,60%{
+      transform: translate(-2px,2px);
+    }
+    62%{
+      transform: translate(13px,-1px) skew(-13deg); 
+    }
+}
+@keyframes glitchBotom{
+    2%,64%{
+      transform: translate(-2px,0);
+    }
+    4%,60%{
+      transform: translate(-2px,0);
+    }
+    62%{
+      transform: translate(-22px,5px) skew(21deg); 
+    }
+}
