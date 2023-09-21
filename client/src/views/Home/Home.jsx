@@ -6,7 +6,7 @@ import SearchBar from '../../components/SearchBar/SearchaBar';
 import Paginated from '../../components/Paginated/Paginated';
 import { useEffect, useState } from 'react';
 //import BackgroundVideo from '../../components/BackgroundVideo/BackgroundVideo';
-import imgPacman from '../../media/pictures/loading2.gif'
+import imgMario from '../../media/pictures/loading2.gif'
 //const BACKGROUND_TYPE = 'Beyond';
 
 const Home = () => {
@@ -105,7 +105,7 @@ const Home = () => {
             </div>
             { onGames === false ? 
                 <div className={styles.divGameLoader}>
-                    <img src={imgPacman} alt="Pacman" />
+                    <img src={imgMario} alt="Mario" />
                     <h3>Loading...</h3>
                 </div> : 
                 <ul className={styles.ulCards}>{ visibleGames.length > 0 ?

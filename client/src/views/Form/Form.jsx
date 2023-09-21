@@ -193,7 +193,7 @@ const Form = () => {
                     }
                 </div>
                 <div className={styles.containerGenres}>
-                    <label htmlFor="">Genre/s: </label>
+                    <label  className={styles.label} htmlFor="">Genre/s: </label>
                     <br />
                     <div className={styles.divGenres}>
                         {

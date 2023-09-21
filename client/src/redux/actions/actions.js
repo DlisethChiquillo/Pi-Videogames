@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { ALL_GAMES, ALL_GENRES, DELETE_DETAIL, FILTER, GET_DETAIL, GET_PLATFORMS, ORDER, SET_PAGE, WORD_NAME } from './action-types';
+import { ALL_GAMES, ALL_GENRES, DELETE_DETAIL, FILTER, GET_DETAIL, GET_PLATFORMS, ORDER, SET_PAGE, WORD_NAME, } from './action-types';
 
 // Games
 export const allGames = () => {
@@ -32,22 +32,39 @@ export const wordName = (word) => {
     }
 }
 
+// export const postGame = (game) => {
+//     const response = '/videogames/create';
+//     return async () => {
+//         try {
+//             await axios.post(response, game)
+//             .then(response => {
+//                 if (response.status === 200) {
+//                     alert('Game created');                
+//                 }
+//             })
+//         } catch (error) {
+//             alert("Failed to create game, please check the data.");
+//             return { error: error.message}
+//         }
+//     }
+// }
+
 export const postGame = (game) => {
-    const response = '/videogames/create';
-    return async () => {
-        try {
-            await axios.post(response, game)
-            .then(response => {
-                if (response.status === 200) {
-                    alert('Game created');                
-                }
-            })
-        } catch (error) {
-            alert("Failed to create game, please check the data.");
-            return { error: error.message}
-        }
+  return async (dispatch) => {
+    try {
+      const response = await axios.post('/videogames/create', game);
+      if (response.status === 200) {
+        // Si la creación del juego es exitosa, actualiza el estado global con el nuevo juego
+        dispatch({ type: 'POST_GAME_SUCCESS', payload: response.data });
+        alert('Game created');
+      }
+    } catch (error) {
+      alert('Failed to create game, please check the data.');
+      console.error(error);
+      return { error: error.message };
     }
-}
+  };
+};
 
 export const getPlatforms = () => {
     const response = '/videogames/platforms';
