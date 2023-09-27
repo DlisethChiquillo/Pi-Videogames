@@ -5,9 +5,8 @@ import { allGames, filterGames, orderGames, setPage, wordName } from '../../redu
 import SearchBar from '../../components/SearchBar/SearchaBar';
 import Paginated from '../../components/Paginated/Paginated';
 import { useEffect, useState } from 'react';
-//import BackgroundVideo from '../../components/BackgroundVideo/BackgroundVideo';
 import imgMario from '../../media/pictures/loading2.gif'
-//const BACKGROUND_TYPE = 'Beyond';
+
 
 const Home = () => {
     const videogames = useSelector(state => state.videogames);
@@ -70,7 +69,7 @@ const Home = () => {
     return(
         <div className={styles.homeContainer}>
         <div className={styles.divBackground}>
-            {/* <BackgroundVideo videoType={BACKGROUND_TYPE}/> */}
+     
         </div>
         <div className={styles.divHome}>
             <div className={styles.divSearchBar}>

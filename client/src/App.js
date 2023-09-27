@@ -16,7 +16,6 @@ import Landing from './views/Landing/Landing';
 import Nav from './components/Nav/Nav';
 import Detail from './views/Detail/Detail';
 import Form from './views/Form/Form';
-// import About from './views/About/About';
 import { allGenres } from './redux/actions/actions';
 import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react';
@@ -39,10 +38,7 @@ function App() {
         (routesNav.find((route) => route === pathname) === pathname) ? <Nav /> : null
       }
       <Routes>
-        {/* <Route
-          path='/about'
-          element={<About/>}
-        /> */}
+       
         <Route
           path='/'
           element={<Landing />}

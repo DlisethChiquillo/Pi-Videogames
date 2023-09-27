@@ -1,6 +1,5 @@
 import styles from './backgroundVideo.module.css'
-import On_the_City from '../../media/video/On_the_City.mp4';
-import Beach_Night from '../../media/video/Beach_Night.mp4'
+import Mario1 from '../../media/video/Mario1.mp4'
 
 
 import { useEffect, useState } from 'react'
@@ -12,8 +11,8 @@ const BackgroundVideo = ({videoType}) => {
     
     useEffect(() => {
         
-     if (videoType === 'City') setVideo(On_the_City);
-            else if (videoType === 'Beach_Night') setVideo(Beach_Night);
+   
+        if (videoType === 'Mario1') setVideo(Mario1);
     
     //     else if (videoType === 'swap') setVideo(random[indexRandom])
     // },[videoType, indexRandom]);
@@ -39,6 +38,6 @@ export default BackgroundVideo;
 
 // if (videoType === 'City') setVideo(On_the_City);: Si la prop videoType es igual a 'City', se asigna el valor de On_the_City a la variable de estado video utilizando la función setVideo.
 
-// else if (videoType === 'Beach_Night') setVideo(Beach_Night);: Si la prop videoType no es igual a 'City' pero es igual a 'Beach_Night', se asigna el valor de Beach_Night a la variable de estado video utilizando la función setVideo.
+// else if (videoType === 'Mario1') setVideo(Beach_Night);: Si la prop videoType no es igual a 'City' pero es igual a 'Beach_Night', se asigna el valor de Beach_Night a la variable de estado video utilizando la función setVideo.
 
 // return(: Comienza la declaración del contenido JSX del componente.

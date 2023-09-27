@@ -15,6 +15,7 @@ const createVideogame = async (req, res) => {
       image,
       releaseDate,
       rating,
+      
     });
 
     for (const genre of genres) {
@@ -31,3 +32,14 @@ const createVideogame = async (req, res) => {
 };
 
 module.exports = createVideogame;
+
+//const createVideogameHandler = async (req, res) => {
+//   try{
+//     const { name, description, platforms, image, releaseDate, rating, genres } = req.body;
+//     const vgCreated = await createVideogame(name, description, platforms, image, releaseDate, rating, genres);
+//     return res.status(200).send(vgCreated);
+// }catch (error){
+//     res.status(400).json({error: error.message});
+// }
+// };
+

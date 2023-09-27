@@ -2,7 +2,7 @@ import styles from './landing.module.css'
 import { NavLink } from 'react-router-dom';
 import BackgroundVideo from '../../components/BackgroundVideo/BackgroundVideo';
 import { useEffect, useState } from 'react';
-const BACKGROUNDTYPE = 'Beach_Night'
+const BACKGROUNDTYPE = 'Mario1'
 
 const Landing = () => {
 

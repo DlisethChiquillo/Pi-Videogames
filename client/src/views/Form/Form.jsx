@@ -3,15 +3,15 @@ import validation from "./validation";
 import { useDispatch, useSelector } from "react-redux";
 import styles from './form.module.css';
 import { getPlatforms, postGame } from "../../redux/actions/actions";
-//import BackgroundVideo from "../../components/BackgroundVideo/BackgroundVideo";
+
 import Loader from "../../components/Loader/Loader";
-//const BACKGROUND_TYPE = 'City';
+
 
 const Form = () => {
-    const genres = useSelector(state => state.genres);
-    const platforms = useSelector(state => state.platforms);
-    const [selectedGenres, setSelectedGenres] = useState([]);
     const dispatch = useDispatch();
+    const genres = useSelector(state => state.genres);
+    // const platforms = useSelector(state => state.platforms);
+    const [selectedGenres, setSelectedGenres] = useState([]);
     useEffect(() => {
         dispatch(getPlatforms())
         if (genres) {

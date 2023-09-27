@@ -1,4 +1,4 @@
-import { ALL_GAMES, ALL_GENRES, DELETE_DETAIL, FILTER, GET_DETAIL, GET_PLATFORMS, ORDER, SET_PAGE, WORD_NAME, POST_GAME_SUCCESS } from "../actions/action-types";
+import { ALL_GAMES, ALL_GENRES, DELETE_DETAIL, FILTER, GET_DETAIL, GET_PLATFORMS, ORDER, SET_PAGE, WORD_NAME, } from "../actions/action-types";
 
 const initialState = {
     allGamesList: [],
@@ -47,13 +47,7 @@ const reducer = (state = initialState, action) => {
                 ...state,
                 platforms: action.payload
             }
-            case POST_GAME_SUCCESS:
-                return {
-                    ...state,
-                    // Actualiza la lista de videojuegos con el nuevo juego creado
-                    videogames: [...state.videogames, action.payload],
-                    // También puedes actualizar otras partes del estado si es necesario
-                }
+            
         case ORDER:
             let orderedVideogames = [...state.videogames];
             if (action.payload === 'Ascendant') {
@@ -111,7 +105,9 @@ const reducer = (state = initialState, action) => {
                 videogames: arrayOfGenres
             }
         default:
-            return state;
+            return{
+                ...state
+            } 
     }
 }
 
