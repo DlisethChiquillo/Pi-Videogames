@@ -33,7 +33,7 @@ export const wordName = (word) => {
 }
 
 export const postGame = (game) => {
-    const response = '/videogames/create';
+    const response = '/create';
     return async () => {
         try {
             await axios.post(response, game)
@@ -67,7 +67,7 @@ export const postGame = (game) => {
 // };
 
 export const getPlatforms = () => {
-    const response = '/videogames/platforms';
+    const response = '/platforms';
     return async (dispatch) => {
         try {
             const { data } = await axios(response)
@@ -83,7 +83,7 @@ export const getPlatforms = () => {
 
 // Genres
 export const allGenres = () => {
-    const response = '/videogames/genres';
+    const response = '/genres';
     return async (dispatch) => {
         try {
             const { data } = await axios(response);
@@ -99,7 +99,7 @@ export const allGenres = () => {
 
 // Detail
 export const getDetail = (id) => {
-    const response = `/videogames/detail/${id}`;
+    const response = `/detail/${id}`;
     return async (dispatch) => {
         try {
             const { data } = await axios (response);

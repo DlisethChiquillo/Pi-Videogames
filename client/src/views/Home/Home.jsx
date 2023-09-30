@@ -66,6 +66,14 @@ const Home = () => {
 
     };
     
+    // const handleFilterByGenre = (event) => {
+    //     const genre = event.target.value;//Obtiene el valor seleccionado del campo de género
+    //     setGenre(genre);//actualizo estado local con valor de genero seleccionado 
+    //     dispatch(filterByGenre(genre));
+    //     setVgName("");
+    //     dispatch(updatePageNumber(1));
+    // }
+    
     return(
         <div className={styles.homeContainer}>
         <div className={styles.divBackground}>
@@ -87,14 +95,14 @@ const Home = () => {
                     </select>
                 </div>
                 <div>
-                    <h3>Filters</h3>
-                    <select className={styles.select} onChange={handleFilter}>
-                        {
-                            genres && genres.map((gen) =>{
-                                return <option key={gen.id} value={gen.name}>{gen.name}</option>
-                            })
-                        }
-                    </select>
+                <h3>Filters</h3>
+                        <select className={styles.select} onChange={handleFilter}>
+                            {
+                                genres && genres.map((gen) =>{
+                                    return <option key={gen.id} value={gen.name}>{gen.name}</option>
+                                })
+                            }
+                        </select>
                     <select className={styles.select} onChange={handleFilter}>
                         <option value="All">All Games</option>
                         <option value="DataBase">DataBase</option>

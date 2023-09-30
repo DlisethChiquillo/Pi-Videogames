@@ -8,7 +8,8 @@ import './index.css';
 import store from './redux/store/store';
  import axios from 'axios';
 
- axios.defaults.baseURL = "https://pi-videogames-main-production-95ae.up.railway.app/";
+ axios.defaults.baseURL = "http://localhost:3001";
+ 
 
 ReactDOM.render(
   <Provider store={store}>

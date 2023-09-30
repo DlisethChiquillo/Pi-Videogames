@@ -33,6 +33,7 @@ const createVideogame = async (req, res) => {
 
 module.exports = createVideogame;
 
+
 //const createVideogameHandler = async (req, res) => {
 //   try{
 //     const { name, description, platforms, image, releaseDate, rating, genres } = req.body;

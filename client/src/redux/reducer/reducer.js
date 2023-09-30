@@ -84,7 +84,7 @@ const reducer = (state = initialState, action) => {
         case FILTER:
             const filteredGames = [...state.videogames];
             let arrayOfGenres = [];
-            const match = state.genres.find(gen => gen.name === action.payload);
+            const match = state.genres.find(genre => genre.name === action.payload);
             if (match) {
                 arrayOfGenres = filteredGames.filter(game => {
                     return game.genres.includes(action.payload);
