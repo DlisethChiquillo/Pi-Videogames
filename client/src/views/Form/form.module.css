@@ -23,6 +23,16 @@
     justify-content: center;
     width: 50vw;
 }
+.divPlatforms{
+    display: flex;
+    flex-direction: row;
+    margin: 0.5rem;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    width: 50vw;
+}
 
 .formBox {
     position: relative;
@@ -96,7 +106,7 @@
 .divDescription { grid-area: 3 / 1 / 4 / 3; }
 .divImage { grid-area: 4 / 1 / 5 / 3; }
 .containerGenres { grid-area: 5 / 1 / 6 / 3; }
-
+.containerPlaforms { grid-area: 5 / 1 / 6 / 3; }
 .formDetail{
     position: relative;
     display: grid;
@@ -249,5 +259,67 @@
   transform: translate(0, 0);
 }
 
+.label{
+    color: rgb(255, 251, 4);
+    font-weight: bold;
+    font-size: 15 px;
+  }
+.platformButton {
+    align-items: center;
+    background-color: rgba(237, 237, 239, 0.941);
+    border-radius: 8px;
+    box-sizing: border-box;
+    color: rgb(10, 10, 10);
+    cursor: pointer;
+    display: flex;
+    font-family: Inter,sans-serif;
+    font-size: 12px;
+    justify-content: center;
+    line-height: 24px;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+  }
+  
+  .platformButton:hover:after {
+    transform: translate(0, 0);
+  }
 
+  .input{
+    width: 76%;
+    font-weight: bold;
+    border-radius: 10px;
+    border: 2px solid #fff;
+    box-shadow: 2px 2px 2px rgb(31, 51, 181);
+    background-color: #191630;
+    color: #42bcd5;
+    font-size: 12px;
+    padding: 10px 10px;
+  }
+  .inputDate{
+    height: 20px;
+    width: 76%;
+    font-weight: bold;
+    border-radius: 10px;
+    border: 2px solid #fff;
+    box-shadow: 2px 2px 2px rgb(31, 51, 181);
+    background-color: #191630;
+    color: white;
+    font-size: 12px;
+    padding: 5 px 5px;
+  }
 
+  .lista{
+    display: inline-flex;
+    font-weight: bold;
+    color: white;
+  }
+  .buttonX {
+    border-radius: 0.7rem;
+    border: solid 2px #191630;
+    background-color: #6f5c7d;
+    padding: 5px 5px;
+  }
